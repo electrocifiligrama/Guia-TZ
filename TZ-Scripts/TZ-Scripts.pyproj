@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>11f8a529-1987-464e-b7f9-8a5472248242</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Ej9-Script.py</StartupFile>
+    <StartupFile>Determinantes.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Ej9-Script.py" />
+    <Compile Include="Determinantes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ej9-impulso.py" />
+    <Compile Include="Ej9_escalon.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
