@@ -940,7 +940,7 @@ Ej9-escalon
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -949,10 +949,6 @@ placement H
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -992,6 +988,89 @@ Item A(
 \end_inset
 
 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/Ej9-Escalon-ItemB.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item b( 
+\begin_inset Formula $\alpha=\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{8}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/Ej9-Escalon-ItemC.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1013,6 +1092,325 @@ Graficas de la respuesta al escalon
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Ejercicio 3.a
+\end_layout
+
+\begin_layout Standard
+Se pide verificar la estabilidad del siguiente filtro recursivo:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+H(z)=\frac{z^{6}}{6z^{6}+5z^{5}+4z^{4}+3z^{3}+2z^{2}+z+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Asumiendo que el sistema es causal se tiene que el sistema es estable si
+ se tiene que todas sus singularidades estan dentro del circulo untario(
+\begin_inset Formula $|z|<1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Se deinfe como funcion caracteristica del sistema a:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $f(z)=6z^{6}+5z^{5}+4z^{4}+3z^{3}+2z^{2}+z+1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+f(z)=z^{6}+\frac{5}{6}z^{5}+\frac{2}{3}z^{4}+\frac{1}{2}z^{3}+\frac{1}{3}z^{2}+\frac{1}{6}z+\frac{1}{6}=0\label{eq:6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para que el sistemaa sea estable debe cumplir:
+\end_layout
+
+\begin_layout Enumerate
+Todos los coeficientes de (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) deben ser menor al orden de la misma
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|\frac{a_{0}}{a_{n}}|<1$
+\end_inset
+
+, donde 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ es el coeficiente que acompana al ttermino independiente y 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ el que acompana a 
+\begin_inset Formula $z^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una simple inspeccion de la f(z) muestra que se cumple la condicion 1, en
+ cuanto a la condicion 2 
+\begin_inset Formula $|\frac{a_{0}}{a_{n}}|=\frac{1}{6}<1$
+\end_inset
+
+.
+ Esto significa que en primera instancia la funcion caracteristica cumple
+ con las condiciones necesarias.
+\end_layout
+
+\begin_layout Standard
+Como siguiente paso se arman las matrices triangulares correspondientes:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $H_{1}=\left(\begin{array}{ccccccc}
+6 & 5 & 4 & 3 & 2 & 1 & 1\\
+0 & 6 & 5 & 4 & 3 & 2 & 1\\
+0 & 0 & 6 & 5 & 4 & 3 & 2\\
+0 & 0 & 0 & 6 & 5 & 4 & 3\\
+0 & 0 & 0 & 0 & 6 & 5 & 4\\
+0 & 0 & 0 & 0 & 0 & 6 & 5\\
+0 & 0 & 0 & 0 & 0 & 0 & 6
+\end{array}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $H_{2}=\left(\begin{array}{ccccccc}
+6 & 5 & 4 & 3 & 2 & 1 & 1\\
+5 & 4 & 3 & 2 & 1 & 1 & 0\\
+4 & 3 & 2 & 1 & 1 & 0 & 0\\
+3 & 2 & 1 & 1 & 0 & 0 & 0\\
+2 & 1 & 1 & 0 & 0 & 0 & 0\\
+1 & 1 & 0 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la suma de ambas matrices se obtiene:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $H_{7}=H_{1}+H_{2}=\left(\begin{array}{ccccccc}
+12 & 10 & 8 & 6 & 4 & 2 & 2\\
+5 & 10 & 8 & 6 & 4 & 3 & 1\\
+4 & 3 & 8 & 6 & 5 & 3 & 2\\
+3 & 2 & 1 & 7 & 5 & 4 & 3\\
+2 & 1 & 1 & 0 & 6 & 5 & 4\\
+1 & 1 & 0 & 0 & 0 & 6 & 5\\
+1 & 0 & 0 & 0 & 0 & 0 & 6
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definiendo los ddeterminantes internos de la matriz como:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\nabla_{1}=7>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\nabla_{3}=\left|\begin{array}{ccc}
+8 & 6 & 5\\
+1 & 7 & 5\\
+1 & 0 & 6
+\end{array}\right|=295>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\nabla_{5}=\left|\begin{array}{ccccc}
+10 & 8 & 6 & 4 & 3\\
+3 & 8 & 6 & 5 & 3\\
+2 & 1 & 7 & 5 & 4\\
+1 & 1 & 0 & 6 & 5\\
+1 & 0 & 0 & 0 & 6
+\end{array}\right|=12383>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\nabla_{7}=\left|\begin{array}{ccccccc}
+12 & 10 & 8 & 6 & 4 & 2 & 2\\
+5 & 10 & 8 & 6 & 4 & 3 & 1\\
+4 & 3 & 8 & 6 & 5 & 3 & 2\\
+3 & 2 & 1 & 7 & 5 & 4 & 3\\
+2 & 1 & 1 & 0 & 6 & 5 & 4\\
+1 & 1 & 0 & 0 & 0 & 6 & 5\\
+1 & 0 & 0 & 0 & 0 & 0 & 6
+\end{array}\right|=507408>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El calculo de los determinantes internos de la matriz se realizo con el
+ script de python titulado 
+\begin_inset Quotes eld
+\end_inset
+
+Determinantes
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como la funcion caracteristica del sistema cumple las condiciones necesarias
+ mencionadas previamente y todos sus determinantes internos son positivos,
+ se concluye que el sistema es estable.
+\end_layout
+
+\begin_layout Section
+Ejercicio 6
+\end_layout
+
+\begin_layout Subsection
+Item a
+\end_layout
+
+\begin_layout Standard
+Se pide demostrar la siguiente igualdad:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $|H(e^{j\omega})|^{2}=H(z).H(z^{-1})|_{z=e^{j\omega}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+demostracion:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $H(z).H(z^{-1})\stackrel{definicion}{=}(\stackrel[k=-\infty]{k=+\infty}{\sum}h(k).z^{-k}).(\stackrel[n=-\infty]{n=+\infty}{\sum}h(n).z^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\overset{distributiva}{=}\stackrel[k=-\infty]{k=+\infty}{\sum}(\stackrel[n=-\infty]{n=+\infty}{\sum}h(n).z^{n})h(k).z^{-k}\stackrel{z=e^{j\omega}}{\rightarrow}\stackrel[k=-\infty]{k=+\infty}{\sum}(\stackrel[n=-\infty]{n=+\infty}{\sum}h(n).e^{jn\omega})h(k).e^{-jk\omega}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\stackrel{Conjugado}{=}\stackrel[k=-\infty]{k=+\infty}{\sum}\overline{(\stackrel[n=-\infty]{n=+\infty}{\sum}\overline{h(n)}.e^{-jn\omega})}h(k).e^{-jk\omega}\stackrel{h\epsilon\mathbb{R}}{=}\stackrel[k=-\infty]{k=+\infty}{\sum}\overline{(\stackrel[n=-\infty]{n=+\infty}{\sum}h(n).e^{-jn\omega})}h(k).e^{-jk\omega}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\stackrel{definicion}{=}\stackrel[k=-\infty]{k=+\infty}{\sum}\overline{H(\omega)}h(k).e^{-jk\omega}=\overline{H(\omega)}.\stackrel[k=-\infty]{k=+\infty}{\sum}h(k).e^{-jk\omega}\stackrel{definicion}{=}\overline{H(\omega)}.H(\omega)=|H(\omega)|^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Item b
+\end_layout
+
+\begin_layout Standard
+Se pide demostrar que el siguiente sistema es un filtro pasa todo(ganancia
+ unitaria para toda frecuencia):
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $H(z)=\frac{1-az+bz^{2}}{b-az+z^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+demostracion:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $|H(e^{j\omega})|^{2}=H(z).H(z^{-1})=\frac{(1-az+bz^{2})}{b-az+z^{2}}.\frac{(1-az^{-1}+bz^{-2})}{b-az^{-1}+z^{-2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $=\frac{\cancel{bz^{2}-(ab+a)z+1+a^{2}+b^{2}-(ab+a)z^{-1}+bz^{-2}}}{\cancel{bz^{2}-(ab+a)z+1+a^{2}+b^{2}-(ab+a)z^{-1}+bz^{-2}}}.1=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Item c
 \end_layout
 
 \end_body
