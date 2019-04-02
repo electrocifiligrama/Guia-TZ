@@ -102,17 +102,13 @@ Se pide hallar la ecuacion en diferencias el siguiente diagrama de bloques:
 placement H
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Imagenes/DiagramaDelEj2b.PNG
-	scale 30
+	scale 40
 
 \end_inset
 
@@ -164,18 +160,12 @@ Se tiene el siguiente diagrama en boques luego de aplicarle la transformada
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Diagram de bloques del sistema en Z
-\end_layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/DiagramaDelEj2bZ.png
 
 \end_inset
 
@@ -183,9 +173,30 @@ Diagram de bloques del sistema en Z
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de bloques del sistema en Z
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De aquí asumiendo condiciones iniciales nulas, se llega a la ecuación en
+ Z del sistema:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Y(z)=2\cdot Y(z)\cdot z^{-1}-\frac{1}{2}\cdot Y(z)\cdot z^{-2}+X(z)\cdot z^{-1}+X(z)$
 \end_inset
 
 
@@ -206,7 +217,7 @@ Se pide determinar la respuesta al impulso, al escalon y la respuesta en
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -299,6 +310,22 @@ De dicha red se obtiene la siguiente ecuacion en diferencias:
 \frac{1}{2}x(nT-2T)+\alpha y(nT-T)+\beta y(nT-2T)=y(nT)\label{eq:1}
 \end{equation}
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para simplificar las cuentas, se normaliza el período a la unidad (
+\begin_inset Formula $T=1$
+\end_inset
+
+) y luego se desnormaliza cuando se llega a los resultados:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{1}{2}x(n-2)+\alpha y(n-1)+\beta y(n-2)=y(n)$
 \end_inset
 
 
@@ -548,9 +575,22 @@ Por lo que se puede reescribir la respuesta impulsiva del sistema como:
 
 \begin_layout Standard
 \align center
+\begin_inset Formula $h(n)=\frac{1}{2\omega}.(\sqrt{-\beta})^{n-1}sin[(n-1)\theta].u(n-1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego, teniendo en cuenta el período de muestreo T, se reescribe se llega
+ a la forma final de la respuesta como:
+\end_layout
+
+\begin_layout Standard
+\align center
 \begin_inset Formula 
 \begin{equation}
-h(n)=\frac{1}{2\omega}.(\sqrt{-\beta})^{n-1}sin[(n-1)\theta].u(n-1)\label{eq:3}
+h(nT)=\frac{1}{2\omega}.(\sqrt{-\beta})^{nT-T}sin[(nT-T)\theta].u(nT-T)\label{eq:3}
 \end{equation}
 
 \end_inset
