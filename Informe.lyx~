@@ -29,9 +29,10 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -44,6 +45,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -55,6 +57,13 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -145,7 +154,7 @@ y(nT)=x(nT)=0; & \forall n<0\end{cases}$
 \end_layout
 
 \begin_layout Standard
-Se tiene el siguiente diagram en boques luego de aplicarle la transformada
+Se tiene el siguiente diagrama en boques luego de aplicarle la transformada
  Z a la red:
 \end_layout
 
@@ -182,12 +191,735 @@ Diagram de bloques del sistema en Z
 
 \end_layout
 
+\begin_layout Subsection
+Ejercicio 9 de la guia de sistemas discretos
+\end_layout
+
 \begin_layout Standard
+Se pide determinar la respuesta al impulso, al escalon y la respuesta en
+ frecuencia del siguiente sistema de segundo orden:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/DiagramaEj9.PNG
+	scale 30
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Subsection
-Ejercicio 9 de la guia de sistemas discretos
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema del ej9 de sistemas discretos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los valores de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+ son:
+\end_layout
+
+\begin_layout Standard
+a) 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) 
+\begin_inset Formula $\alpha=\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{8}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+c) 
+\begin_inset Formula $\alpha=\frac{5}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{25}{32}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De dicha red se obtiene la siguiente ecuacion en diferencias:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2}x(nT-2T)+\alpha y(nT-T)+\beta y(nT-2T)=y(nT)\label{eq:1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando la transformada Z a la ecuacion (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)se obtiene la siguiente expresion:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{1}{2}z^{-2}[z^{2}.x(-2)+z.x(-1)+X(z)]+\alpha.z^{-1}[z.y(-1)+Y(z)]+\beta.z^{-2}[z^{2}y(-2)+z.y(-1)+Y(z)]=Y(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $X(z)$
+\end_inset
+
+ e 
+\begin_inset Formula $Y(z)$
+\end_inset
+
+ son las transformadas Z de 
+\begin_inset Formula $x(n)$
+\end_inset
+
+ e 
+\begin_inset Formula $y(n)$
+\end_inset
+
+ respectivamente.
+\end_layout
+
+\begin_layout Standard
+Considerando al sistema relajado(condiciones iniciales nulas) y la entrada
+ como causal la ecuacion anterior se simplifica a:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{1}{2}z^{-2}X(z)+\alpha z^{-1}Y(z)+\beta z^{-2}Y(z)=Y(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{1}{2}z^{-2}X(z)=Y(z)[1-\beta z^{-2}-\alpha z^{-1}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+\frac{Y(z)}{X(z)}=H(z)=\frac{z^{2}}{z^{2}}.\frac{\frac{1}{2}z^{-2}}{1-\beta z^{-2}-\alpha z^{-1}}=\frac{1}{2}.\frac{1}{z^{2}-\alpha z-\beta}\label{eq:2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los polos de 
+\begin_inset Formula $H(z)$
+\end_inset
+
+(transformada Z de la respuesta impulsiva) tienen la siguiente forma:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{\alpha\pm\sqrt{\alpha^{2}+4\beta}}{2}=\frac{\alpha}{2}\pm\sqrt{(\frac{\alpha}{2})^{2}+\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tanto para el caso a), b) y c) los valores de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+ son tales que cumplen que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $(\frac{\alpha}{2})^{2}+\beta<0\Longrightarrow z_{1,2}=\frac{\alpha}{2}\pm j\sqrt{-[(\frac{\alpha}{2})^{2}+\beta]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por conveniencia definimos 
+\begin_inset Formula $\omega=\sqrt{-[(\frac{\alpha}{2})^{2}+\beta]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede reescribir 
+\begin_inset Formula $H(z)$
+\end_inset
+
+ como:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $H(z)=\frac{1}{2}.\frac{1}{(z-z_{1})(z-z_{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una forma posible de obtener la antitransformada de 
+\begin_inset Formula $H(z)$
+\end_inset
+
+ es medinte residuos utilizando la siguiente formula:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $h(n)=u(n).\sum_{i=1}^{M}Res\{H(z).z^{n-1},z_{i}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este caso las singularidades de 
+\begin_inset Formula $H(z).z^{n-1}$
+\end_inset
+
+ son:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $z_{1,2}=\frac{\alpha}{2}\pm j\omega$
+\end_inset
+
+ y para n=0
+\begin_inset Formula $z_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los residuos correspondientes son:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $lim_{z\rightarrow z_{1}}\cancel{(z-z_{1})}.\frac{1}{2}\frac{z^{n-1}}{\cancel{(z-z_{1})}(z-z_{2})}=\frac{1}{2}.\frac{[(\frac{\alpha}{2})+j\omega]^{n-1}}{2j\omega}\stackrel{Polares}{=}\frac{1}{j4\omega}.(\sqrt{-\beta})^{n-1}e^{j(n-1)\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $lim_{z\rightarrow z_{2}}\cancel{(z-z_{2})}.\frac{1}{2}\frac{z^{n-1}}{(z-z_{1})\cancel{(z-z_{2})}}=-\frac{1}{2}.\frac{[(\frac{\alpha}{2})-j\omega]^{n-1}}{2j\omega}\stackrel{Polares}{=}-\frac{1}{j4\omega}.(\sqrt{-\beta})^{n-1}e^{-j(n-1)\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $lim_{z\rightarrow0}\cancel{(z)}.\frac{1}{2}.\frac{1}{\cancel{z}(z-z_{1})(z-z_{2})}=\frac{1}{2}.\frac{1}{z_{1}.z_{2}}=\frac{1}{2}.\frac{1}{z_{1}.\bar{z_{1}}}=\frac{1}{2}.\frac{1}{|z_{1}|^{2}}=\frac{1}{2}.\frac{1}{(\frac{\alpha}{2})^{2}-(\frac{\alpha}{2})^{2}-\beta}=-\frac{1}{2}.\frac{1}{\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\theta=arctg(\frac{2\omega}{\alpha})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+De dichos residuos se obtiene como expresion de antitransformada:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $h(n)=-\frac{1}{2}.\frac{1}{\beta}\delta(n)+u(n)[\frac{1}{j4\omega}.(\sqrt{-\beta})^{n-1}e^{j(n-1)\theta}-\frac{1}{j4\omega}.(\sqrt{-\beta})^{n-1}e^{-j(n-1)\theta}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $h(n)=\frac{1}{2}[-\frac{1}{\beta}\delta(n)+u(n).\frac{(\sqrt{-\beta})^{n-1}}{\omega}.\underset{\overbrace{sin[(n-1)\theta]}}{(\frac{e^{j(n-1)\theta}-e^{-j(n-1)\theta}}{2j})}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si evaluamos en n=0 se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $h(0)=\frac{1}{2}[-\frac{1}{\beta}+\frac{1}{\omega.\sqrt{-\beta}}.sin(-\theta)]=\frac{1}{2}[-\frac{1}{\beta}-\frac{1}{\cancel{\omega}\sqrt{-\beta}}.\frac{\cancel{\omega}}{\sqrt{-\beta}}]=\frac{1}{2}[-\frac{1}{\beta}+\frac{1}{\beta}]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que se puede reescribir la respuesta impulsiva del sistema como:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+h(n)=\frac{1}{2\omega}.(\sqrt{-\beta})^{n-1}sin[(n-1)\theta].u(n-1)\label{eq:3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se realizo un script(
+\begin_inset Quotes eld
+\end_inset
+
+Ej9-impulso
+\begin_inset Quotes erd
+\end_inset
+
+) para graficar esta respuesta impulsiva para los tres casos a), b) y c),
+ el resultado fue el siguiente:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Imagenes/Ej9-ItemA.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item a( 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{2}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename Imagenes/Ej9-ItemB.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item b( 
+\begin_inset Formula $\alpha=\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{8}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/Ej9-Escalon-ItemC.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item c( 
+\begin_inset Formula $\alpha=\frac{5}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{25}{32}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graficas de las respuestas impulsivas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta al escalon
+\end_layout
+
+\begin_layout Standard
+Para la respuesta al escalon del sistema se comenzo planteando la forma
+ generica de la respuesta de un sistema LTI en tiempo discreto:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $y(n)=(h*u)(n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Transformando ambos lados de la ecuacion se obtiene:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Y(z)=H(z).Z\{u(n)\}(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Z\{u(n)\}(z)=\sum_{k=0}^{+\infty}z^{-k}=\frac{1}{1-z^{-1}}=\frac{z}{z-1},|z|>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces reemplazando la tranformada del escalon calculada previamente y
+ 
+\begin_inset Formula $H(z)$
+\end_inset
+
+ por lo obtenido en (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), se tiene:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Y(z)=\frac{1}{2}.\frac{z}{(z-1)(z^{2}-\alpha z-\beta)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Decomponiendo en fracciones simples:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Y(z)=\frac{A}{z-1}+\frac{Bz+C}{z^{2}-\alpha z-\beta}\Rightarrow\frac{z}{2}=A(z^{2}-\alpha z-\beta)+B.z(z-1)+C(z-1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underline{z=1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{1}{2}=A(1-\alpha-\beta)\rightarrow A=\frac{1}{2(1-\alpha-\beta)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underline{z=0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $0=-\frac{\beta}{2(1-\alpha-\beta)}-C\rightarrow C=-\frac{\beta}{2(1-\alpha-\beta)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underline{z=-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $-\frac{1}{2}=\frac{1+\alpha-\beta}{2(1-\alpha-\beta)}+2B+\frac{\cancel{2}\beta}{\cancel{2}(1-\alpha-\beta)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $-\frac{1}{2}-\frac{1+\alpha-\beta}{2(1-\alpha-\beta)}-\frac{\cancel{2}\beta}{\cancel{2}(1-\alpha-\beta)}=2B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{-1+\cancel{\alpha}+\cancel{\beta}-1-\cancel{\alpha}+\cancel{\beta}-\cancel{2\beta}}{2(1-\alpha-\beta)}=2B\rightarrow B=-\frac{1}{2(1-\alpha-\beta)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Z\{\delta(n-k)\}=z^{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\delta(n-k)*x(n)=x(n-k)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La antitransformada de 
+\begin_inset Formula $Y(z)$
+\end_inset
+
+ es:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $y(n)=A.u(n-1)+2C.h(n)+2B.h(n-1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+y(n)=\frac{1}{2(1-\alpha-\beta)}u(n-1)-\frac{\beta}{1-\alpha-\beta}h(n)-\frac{1}{1-\alpha-\beta}h(n+1)
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
