@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -70,7 +70,7 @@
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -84,16 +84,421 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+HRule}{
+\backslash
+rule{
+\backslash
+linewidth}{0.5mm}}       
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+center        
+\end_layout
+
+\begin_layout Plain Layout
+
+%-------------------------------------------------------------------------------
+--------- 
+\end_layout
+
+\begin_layout Plain Layout
+
+%	HEADING SECTIONS 
+\end_layout
+
+\begin_layout Plain Layout
+
+%-------------------------------------------------------------------------------
+---------      
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textsc{
+\backslash
+LARGE Instituto Tecnológico de Buenos Aires}
+\backslash
+
+\backslash
+[2cm]  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textsc{
+\backslash
+Large 22.05 Análisis de Señales y Sistemas Digitales}
+\backslash
+
+\backslash
+[1.5cm]  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textsc{
+\backslash
+large Guía de Problemas $N^o~2$ }
+\backslash
+
+\backslash
+[0.5cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+%-------------------------------------------------------------------------------
+--------- 
+\end_layout
+
+\begin_layout Plain Layout
+
+%	TITLE SECTION 
+\end_layout
+
+\begin_layout Plain Layout
+
+%-------------------------------------------------------------------------------
+---------      
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+HRule 
+\backslash
+
+\backslash
+[0.5cm] 
+\end_layout
+
+\begin_layout Plain Layout
+
+{ 
+\backslash
+huge Transformada Z}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[0.4cm]  
+\backslash
+HRule 
+\backslash
+
+\backslash
+[2cm]       
+\end_layout
+
+\begin_layout Plain Layout
+
+%-------------------------------------------------------------------------------
+--------- 
+\end_layout
+
+\begin_layout Plain Layout
+
+%	AUTHOR SECTION 
+\end_layout
+
+\begin_layout Plain Layout
+
+%-------------------------------------------------------------------------------
+---------      
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.4
+\backslash
+textwidth} 
+\backslash
+begin{flushleft} 
+\backslash
+large 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+emph{Grupo 2:}
+\backslash
+
+\backslash
+		 [.3cm] 
+\end_layout
+
+\begin_layout Plain Layout
+
+Matías 
+\backslash
+textsc{Larroque}
+\backslash
+
+\backslash
+ Leg.
+ 56597
+\backslash
+
+\backslash
+  [.3cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+Tomas 
+\backslash
+textsc{Agustín González Orlando}
+\backslash
+
+\backslash
+ Leg.
+ 57090
+\backslash
+
+\backslash
+  [.3cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+Lucero Guadalupe 
+\backslash
+textsc{Fernandez}
+\backslash
+
+\backslash
+ Leg.
+ 57485
+\backslash
+
+\backslash
+  [.3cm] 
+\end_layout
+
+\begin_layout Plain Layout
+
+Manuel 
+\backslash
+textsc{Mollón}
+\backslash
+
+\backslash
+ Leg.
+ 58023 
+\backslash
+
+\backslash
+  [.3cm] 
+\end_layout
+
+\begin_layout Plain Layout
+
+Ezequiel 
+\backslash
+textsc{Vijande}
+\backslash
+
+\backslash
+ Leg.
+ 58057
+\backslash
+
+\backslash
+  [.3cm] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flushleft} 
+\backslash
+end{minipage} ~ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.4
+\backslash
+textwidth} 
+\backslash
+begin{flushright} 
+\backslash
+large 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+emph{Profesor:} 
+\backslash
+
+\backslash
+ [.3cm] 
+\end_layout
+
+\begin_layout Plain Layout
+
+Daniel  
+\backslash
+textsc{Jacoby}
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Carlos  
+\backslash
+textsc{Belaustegui Goitia} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Rodrigo  
+\backslash
+textsc{Iribarren} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flushright} 
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[2cm]      
+\end_layout
+
+\begin_layout Plain Layout
+
+%-------------------------------------------------------------------------------
+--------- 
+\end_layout
+
+\begin_layout Plain Layout
+
+%	DATE SECTION 
+\end_layout
+
+\begin_layout Plain Layout
+
+%-------------------------------------------------------------------------------
+---------      
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill {
+\backslash
+large Entregado: 4 de Abril de 2019}
+\backslash
+
+\backslash
+[2cm]      
+\backslash
+vfill       
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Ejercicio 1
 \end_layout
 
 \begin_layout Subsection
-Ejercicio 2b de la guia de sistemas discretos
+Ejercicio 2b de la guía de sistemas discretos
 \end_layout
 
 \begin_layout Standard
-Se pide hallar la ecuacion en diferencias el siguiente diagrama de bloques:
+Se pide hallar la ecuación en diferencias el siguiente diagrama de bloques:
 \end_layout
 
 \begin_layout Standard
@@ -102,7 +507,7 @@ Se pide hallar la ecuacion en diferencias el siguiente diagrama de bloques:
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -150,7 +555,7 @@ y(nT)=x(nT)=0; & \forall n<0\end{cases}$
 \end_layout
 
 \begin_layout Standard
-Se tiene el siguiente diagrama en boques luego de aplicarle la transformada
+Se tiene el siguiente diagrama en bloques luego de aplicarle la transformada
  Z a la red:
 \end_layout
 
@@ -160,7 +565,7 @@ Se tiene el siguiente diagrama en boques luego de aplicarle la transformada
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -203,11 +608,11 @@ De aquí asumiendo condiciones iniciales nulas, se llega a la ecuación en
 \end_layout
 
 \begin_layout Subsection
-Ejercicio 9 de la guia de sistemas discretos
+Ejercicio 9 de la guía de sistemas discretos
 \end_layout
 
 \begin_layout Standard
-Se pide determinar la respuesta al impulso, al escalon y la respuesta en
+Se pide determinar la respuesta al impulso, al escalón y la respuesta en
  frecuencia del siguiente sistema de segundo orden:
 \end_layout
 
@@ -217,13 +622,13 @@ Se pide determinar la respuesta al impulso, al escalon y la respuesta en
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Imagenes/DiagramaEj9.PNG
-	scale 30
+	scale 40
 
 \end_inset
 
@@ -300,7 +705,7 @@ c)
 \end_layout
 
 \begin_layout Standard
-De dicha red se obtiene la siguiente ecuacion en diferencias:
+De dicha red se obtiene la siguiente ecuación en diferencias:
 \end_layout
 
 \begin_layout Standard
@@ -332,7 +737,7 @@ Para simplificar las cuentas, se normaliza el período a la unidad (
 \end_layout
 
 \begin_layout Standard
-Aplicando la transformada Z a la ecuacion (
+Aplicando la transformada Z a la ecuación (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:1"
@@ -342,7 +747,7 @@ noprefix "false"
 
 \end_inset
 
-)se obtiene la siguiente expresion:
+)se obtiene la siguiente expresión:
 \end_layout
 
 \begin_layout Standard
@@ -375,7 +780,7 @@ Donde
 
 \begin_layout Standard
 Considerando al sistema relajado(condiciones iniciales nulas) y la entrada
- como causal la ecuacion anterior se simplifica a:
+ como causal la ecuación anterior se simplifica a:
 \end_layout
 
 \begin_layout Standard
@@ -471,7 +876,7 @@ Una forma posible de obtener la antitransformada de
 \begin_inset Formula $H(z)$
 \end_inset
 
- es medinte residuos utilizando la siguiente formula:
+ es mediante residuos utilizando la siguiente formula:
 \end_layout
 
 \begin_layout Standard
@@ -538,7 +943,7 @@ Donde
 
 \end_deeper
 \begin_layout Standard
-De dichos residuos se obtiene como expresion de antitransformada:
+De dichos residuos se obtiene como expresión de antitransformada:
 \end_layout
 
 \begin_layout Standard
@@ -620,7 +1025,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-\align left
+\align center
 \begin_inset Float figure
 placement H
 wide false
@@ -630,7 +1035,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Imagenes/Ej9-ItemA.png
-	scale 20
+	scale 25
 
 \end_inset
 
@@ -674,7 +1079,7 @@ status collapsed
 \align left
 \begin_inset Graphics
 	filename Imagenes/Ej9-ItemB.png
-	scale 20
+	scale 25
 
 \end_inset
 
@@ -716,13 +1121,13 @@ Item b(
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Imagenes/Ej9-Escalon-ItemC.png
-	scale 20
+	scale 25
 
 \end_inset
 
@@ -758,7 +1163,7 @@ Item c(
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Graficas de las respuestas impulsivas
+Gráficas de las respuestas impulsivas
 \end_layout
 
 \end_inset
@@ -776,12 +1181,12 @@ Graficas de las respuestas impulsivas
 \end_layout
 
 \begin_layout Subsubsection
-Respuesta al escalon
+Respuesta al escalón
 \end_layout
 
 \begin_layout Standard
-Para la respuesta al escalon del sistema se comenzo planteando la forma
- generica de la respuesta de un sistema LTI en tiempo discreto:
+Para la respuesta al escalón del sistema se comenzó planteando la forma
+ genérica de la respuesta de un sistema LTI en tiempo discreto:
 \end_layout
 
 \begin_layout Standard
@@ -793,7 +1198,7 @@ Para la respuesta al escalon del sistema se comenzo planteando la forma
 \end_layout
 
 \begin_layout Standard
-Transformando ambos lados de la ecuacion se obtiene:
+Transformando ambos lados de la ecuación se obtiene:
 \end_layout
 
 \begin_layout Standard
@@ -817,8 +1222,8 @@ Donde:
 \end_layout
 
 \begin_layout Standard
-Entonces reemplazando la tranformada del escalon calculada previamente y
- 
+Entonces reemplazando la transformada del escalón calculada previamente
+ y 
 \begin_inset Formula $H(z)$
 \end_inset
 
@@ -844,7 +1249,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Decomponiendo en fracciones simples:
+Descomponiendo en fracciones simples:
 \end_layout
 
 \begin_layout Standard
@@ -971,7 +1376,7 @@ Ej9-escalon
 \begin_inset Quotes erd
 \end_inset
 
-) para graficar la repuesta al escalon de cada item.
+) para graficar la repuesta al escalón de cada item.
 \end_layout
 
 \begin_layout Standard
@@ -1031,17 +1436,13 @@ Item A(
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Imagenes/Ej9-Escalon-ItemB.png
-	scale 20
+	scale 25
 
 \end_inset
 
@@ -1117,7 +1518,209 @@ Item c
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Graficas de la respuesta al escalon
+Gráficas de la respuesta al escalon
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta en frecuencia
+\end_layout
+
+\begin_layout Standard
+Se puede obtener la respuesta en frecuencia del sistema mediante la 
+\begin_inset Formula $H(z)$
+\end_inset
+
+ obtenida evaluando la misma en el circulo unitario.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $H(\omega)=H(z)|_{z=e^{j\omega}}=\frac{1}{2}.\frac{1}{e^{j2\omega}-\alpha e^{j\omega}-\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dicha función transferencia fue simulada y graficada.A continuación se presentan
+ las gráficas obtenidas del script de python 'RespFrecuencia':
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/RespFrecEj9ItemA.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item a( 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{2}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/RespFrecEj9ItemB.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item b( 
+\begin_inset Formula $\alpha=\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{8}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/RespFrecEj9ItemC.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item c( 
+\begin_inset Formula $\alpha=\frac{5}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{25}{32}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráficas de la repuesta en frecuencia
 \end_layout
 
 \end_inset
@@ -1156,7 +1759,7 @@ H(z)=\frac{z^{6}}{6z^{6}+5z^{5}+4z^{4}+3z^{3}+2z^{2}+z+1}
 
 \begin_layout Standard
 Asumiendo que el sistema es causal se tiene que el sistema es estable si
- se tiene que todas sus singularidades estan dentro del circulo untario(
+ se tiene que todas sus singularidades están dentro del circulo unitario(
 \begin_inset Formula $|z|<1$
 \end_inset
 
@@ -1164,7 +1767,7 @@ Asumiendo que el sistema es causal se tiene que el sistema es estable si
 \end_layout
 
 \begin_layout Standard
-Se deinfe como funcion caracteristica del sistema a:
+Se define como función característica del sistema a:
 \end_layout
 
 \begin_layout Standard
@@ -1188,7 +1791,7 @@ f(z)=z^{6}+\frac{5}{6}z^{5}+\frac{2}{3}z^{4}+\frac{1}{2}z^{3}+\frac{1}{3}z^{2}+\
 \end_layout
 
 \begin_layout Standard
-Para que el sistemaa sea estable debe cumplir:
+Para que el sistema sea estable debe cumplir:
 \end_layout
 
 \begin_layout Enumerate
@@ -1213,11 +1816,11 @@ noprefix "false"
 \begin_inset Formula $a_{0}$
 \end_inset
 
- es el coeficiente que acompana al ttermino independiente y 
+ es el coeficiente que acompaña al termino independiente y 
 \begin_inset Formula $a_{n}$
 \end_inset
 
- el que acompana a 
+ el que acompaña a 
 \begin_inset Formula $z^{n}$
 \end_inset
 
@@ -1225,13 +1828,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Una simple inspeccion de la f(z) muestra que se cumple la condicion 1, en
- cuanto a la condicion 2 
+Una simple inspección de la f(z) muestra que se cumple la condición 1, en
+ cuanto a la condición 2 
 \begin_inset Formula $|\frac{a_{0}}{a_{n}}|=\frac{1}{6}<1$
 \end_inset
 
 .
- Esto significa que en primera instancia la funcion caracteristica cumple
+ Esto significa que en primera instancia la función característica cumple
  con las condiciones necesarias.
 \end_layout
 
@@ -1288,7 +1891,7 @@ De la suma de ambas matrices se obtiene:
 \end_layout
 
 \begin_layout Standard
-Definiendo los ddeterminantes internos de la matriz como:
+Definiendo los determinantes internos de la matriz como:
 \end_layout
 
 \begin_layout Itemize
@@ -1351,7 +1954,7 @@ Determinantes
 \end_layout
 
 \begin_layout Standard
-Como la funcion caracteristica del sistema cumple las condiciones necesarias
+Como la función característica del sistema cumple las condiciones necesarias
  mencionadas previamente y todos sus determinantes internos son positivos,
  se concluye que el sistema es estable.
 \end_layout
@@ -1377,7 +1980,7 @@ Se pide demostrar la siguiente igualdad:
 \end_layout
 
 \begin_layout Standard
-demostracion:
+demostración:
 \end_layout
 
 \begin_layout Standard
@@ -1430,7 +2033,7 @@ Se pide demostrar que el siguiente sistema es un filtro pasa todo(ganancia
 \end_layout
 
 \begin_layout Standard
-demostracion:
+demostración:
 \end_layout
 
 \begin_layout Standard
@@ -1451,6 +2054,90 @@ demostracion:
 
 \begin_layout Subsection
 Item c
+\end_layout
+
+\begin_layout Standard
+Se pide demostrar que los pares de polos y ceros ocurren en pares recíprocos
+ y conjugados.
+\end_layout
+
+\begin_layout Standard
+demostración:
+\end_layout
+
+\begin_layout Standard
+Se tiene que función transferencia genérica de un sistema puede escribirse
+ como:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $H(z)=\frac{a_{n}z^{n}+a_{n-1}z^{n-1}+...+a_{0}}{b_{m}z^{m}+b_{m-1}z^{m-1}+...+b_{0}}$
+\end_inset
+
+, Donde los 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ y los 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ son reales(
+\begin_inset Formula $\forall i\epsilon\mathbb{\mathbb{N}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Si se define el denominador de la transferencia como f(z) se tiene que los
+ polos del sistema están dados por:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $f(z)=\stackrel[i=0]{m}{\sum}b_{i}z^{i}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Asumiendo que 
+\begin_inset Formula $z_{j}$
+\end_inset
+
+ es una raíz compleja de 
+\begin_inset Formula $f(z)$
+\end_inset
+
+, si evaluamos 
+\begin_inset Formula $f(\overline{z_{j}})$
+\end_inset
+
+ se llega a que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $f(\overline{z_{j}})=\stackrel[i=0]{m}{\sum}b_{i}\overline{z}_{j}^{i}=\stackrel[i=0]{m}{\sum}b_{i}\overline{z_{j}^{i}}\stackrel{b_{i}\epsilon\mathbb{R}}{=}\stackrel[i=0]{m}{\sum}\overline{b_{i}}\overline{z_{j}^{i}}=\stackrel[i=0]{m}{\sum}\overline{b_{i}z_{j}^{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $=\overline{\stackrel[i=0]{m}{\sum}b_{i}z_{j}^{i}}\stackrel{z_{j}raiz}{=}\overline{0}=0\rightarrow\overline{z_{j}}$
+\end_inset
+
+ también es raíz.
+\end_layout
+
+\begin_layout Standard
+Ya que el numerador también es un polinomio con coeficientes reales aplica
+ la misma deducción.
 \end_layout
 
 \end_body
