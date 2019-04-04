@@ -507,7 +507,7 @@ Se pide hallar la ecuación en diferencias el siguiente diagrama de bloques:
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -595,16 +595,52 @@ Diagrama de bloques del sistema en Z
 \end_layout
 
 \begin_layout Standard
-De aquí asumiendo condiciones iniciales nulas, se llega a la ecuación en
- Z del sistema:
+De aquí asumiendo condiciones iniciales nulas y llamando 
+\begin_inset Formula $a(z)$
+\end_inset
+
+ a la señal que sale del primer bloque sumador, se tienen las ecuaciones:
 \end_layout
 
 \begin_layout Standard
 \align center
-\begin_inset Formula $Y(z)=2\cdot Y(z)\cdot z^{-1}-\frac{1}{2}\cdot Y(z)\cdot z^{-2}+X(z)\cdot z^{-1}+X(z)$
+\begin_inset Formula $\begin{cases}
+\begin{array}{c}
+a(z)=X(z)+z^{-1}a(z)-\frac{1}{2}z^{-2}a(z)\\
+Y(z)=a(z)[1+z^{-1}]
+\end{array} & \rightarrow\end{cases}\begin{cases}
+\begin{array}{c}
+a(z)=\frac{1}{1+\frac{1}{2}z^{-2}-z^{-1}}X(z)\\
+Y(z)=a(z)[1+z^{-1}]
+\end{array} & \rightarrow\end{cases}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Y(z)=X(z)\frac{1+z^{-1}}{1+\frac{1}{2}z^{-2}-z^{-1}}\rightarrow Y(z)[1+\frac{1}{2}z^{-2}-z^{-1}]=X(z)[1+z^{-1}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Antitransformando la expresión anterior se llega a:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $y(nT)+\frac{1}{2}y(nT-2T)-y(nT-T)=x(nT)+x(nT-T)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta expresión es la misma que se obtuvo en la resolución para la guiá de
+ sistemas discretos.
 \end_layout
 
 \begin_layout Subsection
@@ -622,7 +658,7 @@ Se pide determinar la respuesta al impulso, al escalón y la respuesta en
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1030,7 +1066,7 @@ status collapsed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1126,7 +1162,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Imagenes/Ej9-Escalon-ItemC.png
+	filename Imagenes/Ej9-ItemC.png
 	scale 25
 
 \end_inset
@@ -1175,6 +1211,33 @@ Gráficas de las respuestas impulsivas
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como era de esperarse las gráficas obtenidas son iguales a las que se obtuvieron
+ en la resolución para la guiá de sistemas discretos.
+ A su vez se obtienen las siguientes pseudofrecuencias de oscilación para
+ cada item:
+\end_layout
+
+\begin_layout Standard
+a)
+\begin_inset Formula $f=\frac{1}{8T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) No hay oscilación apreciable
+\end_layout
+
+\begin_layout Standard
+c) 
+\begin_inset Formula $f=\frac{1}{8T}$
 \end_inset
 
 
@@ -1359,7 +1422,7 @@ La antitransformada de
 \align center
 \begin_inset Formula 
 \begin{equation}
-y(n)=\frac{1}{2(1-\alpha-\beta)}u(n-1)-\frac{\beta}{1-\alpha-\beta}h(n)-\frac{1}{1-\alpha-\beta}h(n+1)
+y(nT)=\frac{1}{2(1-\alpha-\beta)}u(nT-T)-\frac{\beta}{1-\alpha-\beta}h(nT)-\frac{1}{1-\alpha-\beta}h(nT+T)
 \end{equation}
 
 \end_inset
@@ -1436,7 +1499,7 @@ Item A(
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1550,6 +1613,191 @@ Se puede obtener la respuesta en frecuencia del sistema mediante la
 \begin_layout Standard
 \align center
 \begin_inset Formula $H(\omega)=H(z)|_{z=e^{j\omega}}=\frac{1}{2}.\frac{1}{e^{j2\omega}-\alpha e^{j\omega}-\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dicha función transferencia fue simulada y graficada.A continuación se presentan
+ las gráficas obtenidas del script de python 'RespFrecuencia':
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/RespFrecEj9ItemA.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item a( 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{2}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/RespFrecEj9ItemB.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item b( 
+\begin_inset Formula $\alpha=\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{1}{8}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/RespFrecEj9ItemC.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Item c( 
+\begin_inset Formula $\alpha=\frac{5}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-\frac{25}{32}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráficas de la repuesta en frecuencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -1775,6 +2023,13 @@ Determinantes
 Como la función característica del sistema cumple las condiciones necesarias
  mencionadas previamente y todos sus determinantes internos son positivos,
  se concluye que el sistema es estable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
